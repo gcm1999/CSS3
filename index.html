@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloworld</title>
+</head>
+<body>
+    <img src="./EDG.jpg" width="300px">
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        img{
+            border-radius: 100%;
+
+            /* 过度属性  all所有属性 0.5s */
+            transition: all 0.5s;
+             -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            cursor: pointer;
+        }
+        img:hover{
+            /* 鼠标进入时缩放1.1倍 */
+            transform:scale(1.1);
+        }
+    </style>
+</body>
+</html>
