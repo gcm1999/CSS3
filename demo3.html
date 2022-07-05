@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style type="text/css">
+        .demo{
+            border: 1px solid #ccc;
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+
+        .demo::first-letter{
+            font-size: 40px;
+            font-weight: bold;
+            float: left;
+        }
+
+        .demo::first-line{
+            color: #f66;
+
+        }
+
+        .demo2{
+            width: 300px;
+            border: 1px solid #ccc;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .demo2::before{
+            content: '';
+            display: block;
+            background: url('./EDG.jpg');
+            background-size: cover;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        疾风剑豪·亚索，是MOBA竞技网游《英雄联盟》中第117位登场的英雄角色，英雄定位为战士、刺客。
+        亚索是一位近战爆发AD刺客，双突进的技能设置使得他在中单游刃有余，并且大招在队友的配合下，在团战中能够发挥至关重要的作用
+    </div>
+
+    <!-- <div>
+        <img src="./EDG.jpg" style="width: 300px;">
+    </div> -->
+    <div class="demo2">
+        EDG牛逼！
+    </div>
+</body>
+</html>
