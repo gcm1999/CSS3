@@ -1,0 +1,10 @@
+.sanjiao{
+    /* border: 50px solid #ccc; */
+    border-top: 50px solid red;
+    border-left: 50px solid gold;
+    border-bottom: 50px solid blue;
+    border-right: 50px solid pink;
+    width: 0;
+    height: 0;
+    margin: 50px auto;
+}
