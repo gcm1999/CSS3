@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心形和蛋形</title>
+    <style type="text/css">
+
+        .xin{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            /* background-color: yellow; */
+        }
+
+        .xin::before{
+            content: '';
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50px 40px 0 0;
+            transform-origin: 0 100%;
+            transform: rotate(-45deg);
+            left: 50px;
+        }
+
+        .xin::after{
+            content: '';
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50px 40px 0 0;
+            transform-origin: 100% 100%;
+            transform: rotate(45deg);
+        }
+
+        .dan{
+            width: 126px;
+            height: 180px;
+            background-color: #fa3;
+            margin:15px auto ;
+            border-radius: 50%/ 60% 60% 40% 40%;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="xin"></div>
+
+    <div class="dan"></div>
+    
+</body>
+</html>
