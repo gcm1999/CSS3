@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性渐变</title>
+    <style>
+
+        .ceng{
+            width: 260px;
+            height: 200px;
+            border: 1px solid black;
+
+            /* 前50%为orange;50%-100%从orange渐变到blue */
+            background-image: linear-gradient(to right,orange 50%,blue 100%);
+            /* to left  相当于270deg
+                to right    90deg
+                to top      0deg
+                to bottom   180deg */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ceng"></div>
+</body>
+</html>
