@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>过度</title>
     <style>
-        .ceng{
-            width: 100px;
-            height: 100px;
-            background-color: pink;
-            cursor: pointer;
-            /* transition: 100s; */
+      .ceng {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        cursor: pointer;
 
-            /* 过渡时间 */
-            transition-duration: 2s;
-            /* 过渡属性 */
-            transition-property: all;
-            /* 过渡延迟 */
-            transition-delay: .2s;
-            transition-timing-function:ease;
-        }
-        .ceng:hover{
-            width: 300px;
-            height: 300px;background-color: red;
-            border-radius: 50%;
-        }
+        /* transition: all 2s .2s ease; */
+
+        /* 过渡时间 */
+        transition-duration: 2s;
+        /* 过渡属性 */
+        transition-property: all;
+        /* 过渡延迟 */
+        transition-delay: 0.2s;
+
+        /* 过渡函数 
+                ease/ease-in-out        慢>快>慢
+                linear      匀速
+                ease-in     慢>快
+                ease-out    快>慢
+                step-start  直接变化
+                step-end    不变化过渡时间结束后直接变化
+            */
+        transition-timing-function: step-end;
+      }
+      .ceng:hover {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        border-radius: 50%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="ceng"></div>
-</body>
+  </body>
 </html>

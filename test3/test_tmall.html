@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿天猫专题过渡效果</title>
+    <style>
+      .main {
+        margin: 10px auto;
+        width: 360px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      .main li {
+        list-style: none;
+        cursor: pointer;
+      }
+      .m_title{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px;
+      }
+      .m_content{
+        color: #ccc;
+        margin-bottom: 100px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .m_img{
+        position: relative;
+        
+      }
+      .m_img::after{
+        content: "";
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background-color: #ccc;
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        z-index: -2;
+      }
+      .m_img img{
+        transform: scale(1);
+        transition: all 2s;
+      }
+      .main li:hover .m_img img{
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul>
+        <li>
+          <div class="m_title">手机馆</div>
+          <div class="m_content">小米</div>
+          <div class="m_img"><img src="../img/小米.png" alt="小米" /></div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
