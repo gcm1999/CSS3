@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tooltips</title>
+    <style>
+      .hello {
+        width: 200px;
+        margin: 200px auto;
+        border: 1px solid black;
+        position: relative;
+        cursor: pointer;
+        /* display: inline-block; */
+      }
+      .hello::before {
+        content: attr(tips);
+        background-color: #6a6;
+        margin: 50px auto;
+        width: 200px;
+        height: 25px;
+        line-height: 25px;
+        padding: 10px;
+        border-radius: 6px;
+        color: #fff;
+        left: 0;
+        top:-100px;
+        position: absolute;
+        visibility: hidden;
+      }
+      .hello::after {
+        content: "";
+        border-bottom: 0 solid transparent;
+        border-left: 10px solid transparent;
+        border-top: 10px solid #6a6;
+        border-right: 10px solid transparent;
+        position: absolute;
+        visibility: hidden;
+        left: 100px;;
+        top: -10px;
+      }
+
+      .hello:hover:before,
+      .hello:hover:after {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello" tips="hellotip">hello</div>
+  </body>
+</html>
